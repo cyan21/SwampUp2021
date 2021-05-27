@@ -9,6 +9,7 @@ resources:
       files:
         include: ${trainingPath}/lab1/java/.+
       buildOn:
+        commit: true
         pullRequestCreate: true
         pullRequestClose: true
         
