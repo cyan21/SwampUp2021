@@ -1,5 +1,5 @@
 pipelines:
-  - name: test_deployment
+  - name: vm_deployment
     steps:
       - name: deploy_webapp
         type: deployment/Webapp

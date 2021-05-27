@@ -1,5 +1,5 @@
 pipelines:
-  - name: vm_deployment
+  - name: basic_vm_deployment
 
     steps:
       - name: deploy_to_vm
