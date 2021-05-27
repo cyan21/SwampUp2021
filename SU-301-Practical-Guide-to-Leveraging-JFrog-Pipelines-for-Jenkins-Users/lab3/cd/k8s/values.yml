@@ -9,7 +9,7 @@ K8s:
     artifactory: artifactory_eu
     k8s: eks_eu
   namespace: build-plane
-  releaseName: my-web-app
+  releaseName: yann-test
 
 K8sResources:
   gitRepoHelm:
