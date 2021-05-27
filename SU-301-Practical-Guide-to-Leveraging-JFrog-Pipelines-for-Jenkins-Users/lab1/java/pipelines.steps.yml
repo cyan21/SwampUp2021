@@ -35,7 +35,7 @@ pipelines:
           onFailure:
             - echo "Not cool"
           onSuccess:
-            - echo "Yahoo"
+            - echo "Yahoo Mexico"
 
       - name: lab1_scan_backapp_mvn
         type: XrayScan
