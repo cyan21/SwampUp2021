@@ -5,7 +5,7 @@ resources:
       gitProvider: my_github
       path: cyan21/SwampUp2021
       branches:
-        include: yann
+        include: {{ gitBranch }}
       files:
         include: SU-301-Practical-Guide-to-Leveraging-JFrog-Pipelines-for-Jenkins-Users/lab1/python/.*
       buildOn:
