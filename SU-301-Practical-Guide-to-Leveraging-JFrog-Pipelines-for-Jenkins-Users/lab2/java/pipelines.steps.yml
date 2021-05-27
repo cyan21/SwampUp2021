@@ -29,7 +29,7 @@ pipelines:
             - name: artifactory_eu
         execution:
           onStart:
-            - ls -l ${res_lab1_src_code_backapp_mvn_resourcePath}/${trainingPath}/lab1/src/java
+            - ls -l ${res_lab2_src_code_backapp_mvn_resourcePath}/${trainingPath}/src/java
             - jfrog rt c show
           onFailure:
             - echo "Not cool"
