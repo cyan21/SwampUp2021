@@ -15,7 +15,7 @@ pipelines:
           environmentVariables:
             JFROG_CLI_BUILD_NAME: "{{ gitBranch }}_webapp_python"
             JFROG_CLI_BUILD_URL: "${step_url}${res_lab1_src_code_webapp_python_branchName}"
-            JFROG_CLI_LOG_LEVEL: DEBUG
+            JFROG_CLI_LOG_LEVEL: INFO
           affinityGroup: python
           runtime:
             type: image
