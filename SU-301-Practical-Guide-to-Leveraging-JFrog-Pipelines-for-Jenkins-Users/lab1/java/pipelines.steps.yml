@@ -31,7 +31,7 @@ pipelines:
         execution:
           onStart:
             - ls -l ${res_lab1_src_code_backapp_mvn_resourcePath}/${trainingPath}/src/java
-            - jfrog rt c show
+            - jfrog rt c show && jfrog --version
           onFailure:
             - echo "Not cool"
           onSuccess:
