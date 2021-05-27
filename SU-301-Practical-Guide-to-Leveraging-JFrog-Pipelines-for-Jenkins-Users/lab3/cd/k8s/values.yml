@@ -32,7 +32,7 @@ K8sResources:
 K8sSteps:
   publishHelm:
     name: lab3_publish_helm_chart
-    path: ${trainingPath}/lab3/cd/k8s/helm_chart/
+    path: SU-301-Practical-Guide-to-Leveraging-JFrog-Pipelines-for-Jenkins-Users/lab3/cd/k8s/helm_chart/
     lint: true
     autoPublishBuildInfo: true
   deployHelm:
