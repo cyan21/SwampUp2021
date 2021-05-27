@@ -44,6 +44,8 @@ pipelines:
             - jfrog rt upload webapp_python.tar.gz ${genericRepo} --build-name ${res_lab1_bi_webapp_python_buildName} --build-number ${run_number}
             - jfrog rt bce ${res_lab1_bi_webapp_python_buildName} ${run_number}
             - jfrog rt bp  ${res_lab1_bi_webapp_python_buildName} ${run_number}
+          onSuccess:
+            - echo "Ok that's cool"
           
       - name: lab1_scan_webapp_python
         type: XrayScan
