@@ -13,7 +13,7 @@ pipelines:
           environmentVariables:
             JFROG_CLI_BUILD_NAME: "{{ gitBranch }}_backapp_mvn"
             JFROG_CLI_BUILD_URL: "${step_url}${res_lab1_src_code_backapp_mvn_branchName}"
-            JFROG_CLI_LOG_LEVEL: DEBUG
+            JFROG_CLI_LOG_LEVEL: INFO
           mvnCommand: clean package
           sourceLocation: ${trainingPath}/src/java
           resolverSnapshotRepo: ${virtualRepo}
