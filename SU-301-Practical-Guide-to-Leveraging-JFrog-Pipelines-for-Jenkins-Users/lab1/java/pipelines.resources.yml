@@ -7,7 +7,7 @@ resources:
       branches:
         include: {{ gitBranch }}
       files:
-        include: ${trainingPath}/lab1/java/.+
+        include: SU-301-Practical-Guide-to-Leveraging-JFrog-Pipelines-for-Jenkins-Users/lab1/java/.*
       buildOn:
         pullRequestCreate: true
         pullRequestClose: true
@@ -22,6 +22,6 @@ resources:
   - name: lab1_bi_backapp_mvn_promoted
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory_brexit
+      sourceArtifactory: artifactory_eu
       buildName: {{ gitBranch }}_backapp_mvn
       buildNumber: ${run_number}
