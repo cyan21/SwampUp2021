@@ -46,7 +46,7 @@ pipelines:
               trigger: true
 
       - name: lab1_running_my_stuff
-        type: Bash
+        type: PowerShell
         configuration:
           inputResources:
             - name: lab1_bi_backapp_mvn
@@ -54,7 +54,7 @@ pipelines:
           onStart:
             - jfrog --version 
             - echo "doing stuff that you want"
-            - sleep 60
+            - Start-Sleep -Seconds 60
 
       - name: lab1_promote_bi_backapp_mvn
         type: PromoteBuild
