@@ -15,7 +15,7 @@ def index():
 
     r = requests.get("https://api.agify.io/?name=" + username).json()
 
-    return "Congratulations " + username + " , it's a web app! By the way, are you " + str(r['age']) + " years old ?"
+    return "[Windows] Congratulations " + username + " , it's a web app! By the way, are you " + str(r['age']) + " years old ?"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)

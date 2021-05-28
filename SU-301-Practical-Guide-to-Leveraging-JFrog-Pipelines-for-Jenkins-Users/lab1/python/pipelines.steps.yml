@@ -1,6 +1,7 @@
 pipelines:
   - name: lab1_webapp_python
     configuration:
+      nodePool: windows_pool
       environmentVariables:
         readOnly:
           trainingPath: SU-301-Practical-Guide-to-Leveraging-JFrog-Pipelines-for-Jenkins-Users
