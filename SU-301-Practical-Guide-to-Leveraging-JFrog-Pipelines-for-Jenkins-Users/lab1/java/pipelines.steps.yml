@@ -45,6 +45,17 @@ pipelines:
             - name: lab1_bi_backapp_mvn
               trigger: true
 
+      - name: lab1_running_my_stuff
+        type: Bash
+        configuration:
+          inputResources:
+            - name: lab1_bi_backapp_mvn
+        execution:
+          onStart:
+            - jfrog --version 
+            - echo "doing stuff that you want"
+            - sleep 60
+
       - name: lab1_promote_bi_backapp_mvn
         type: PromoteBuild
         configuration:
@@ -58,5 +69,6 @@ pipelines:
               trigger: true
           inputSteps:
             - name: lab1_scan_backapp_mvn
+            - name: lab1_running_my_stuff
           outputResources:
             - name: lab1_bi_backapp_mvn_promoted
