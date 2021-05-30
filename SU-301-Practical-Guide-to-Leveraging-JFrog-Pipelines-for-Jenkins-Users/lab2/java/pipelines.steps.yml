@@ -92,7 +92,7 @@ pipelines:
             JFROG_CLI_LOG_LEVEL: INFO
           affinityGroup: together
           dockerFileName: Dockerfile
-          dockerFileLocation: src/java/
+          dockerFileLocation: ${trainingPath}/src/java/
           dockerImageName: ${dockerRepo}/urs-docker/backapp-mvn-docker
           dockerImageTag: ${runVarAppVersion}
           inputSteps:
@@ -104,8 +104,8 @@ pipelines:
             - name: artifactory_eu
         execution:
           onStart:
-            - pwd && ls -l
-            - ls -l ../../ 
+            # - pwd && ls -l
+            # - ls -l ../../ 
             - ls -la ${res_lab2_fs_backapp_mvn_resourcePath}
             - echo ${res_lab2_src_dockerfile_backapp_mvn_resourcePath}
             - ls -la  ${res_lab2_src_dockerfile_backapp_mvn_resourcePath}
