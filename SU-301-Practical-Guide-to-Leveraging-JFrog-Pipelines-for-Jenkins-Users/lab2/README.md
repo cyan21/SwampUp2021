@@ -5,7 +5,7 @@
       path: cyan21/SwampUp2021
 ```
 
-2. In `lab2/{java,python}/pipelines.steps.yml` and `lab2/{java,python}/Dockerfile`, replace all the occurences of **swampup301.jfrog.io** with your own JFrog Platform URL 
+2. In `lab2/{java,python}/pipelines.steps.yml` and `src/{java,python}/Dockerfile`, replace all the occurences of **swampup301.jfrog.io** with your own JFrog Platform URL 
 
 3. Modify your pipeline source by editing the  **Pipeline Config File Filter** :
 * java : `SU-301-Practical-Guide-to-Leveraging-JFrog-Pipelines-for-Jenkins-Users\/lab2\/java\/pipelines.*\.yml`
