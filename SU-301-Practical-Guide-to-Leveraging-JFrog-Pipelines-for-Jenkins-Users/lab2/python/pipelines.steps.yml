@@ -131,7 +131,7 @@ pipelines:
         configuration:
           environmentVariables:
             JFROG_CLI_BUILD_NAME: "{{ gitBranch }}_webapp_python_docker"
-            JFROG_CLI_BUILD_URL: "${step_url}${res_lab2_src_code_webapp_python_branchName}"
+            JFROG_CLI_BUILD_URL: "${step_url}{{ gitBranch }}"
             JFROG_CLI_LOG_LEVEL: INFO
           affinityGroup: together
           targetRepository: urs-docker-dev-local
