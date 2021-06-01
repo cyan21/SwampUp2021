@@ -114,7 +114,7 @@ pipelines:
             - name: lab2_fs_webapp_python
           integrations:
             - name: artifactory_eu
-            # - name: artifactory_docker
+            - name: artifactory_docker
         execution:
           onStart:
             - ls -la ${res_lab2_fs_webapp_python_resourcePath}
@@ -125,6 +125,7 @@ pipelines:
               ${res_lab2_fs_webapp_python_resourcePath}/webapp_python.tar.gz
               ${res_lab2_src_dockerfile_webapp_python_resourcePath}/${trainingPath}/src/python/
             - ls -l  ${res_lab2_src_dockerfile_webapp_python_resourcePath}/${trainingPath}/src/python/
+            - echo "it's tuesday"
 
       - name: lab2_publish_webapp_python_docker
         type: DockerPush
